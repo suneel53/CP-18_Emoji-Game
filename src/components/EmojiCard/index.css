@@ -13,3 +13,9 @@
   justify-content: center;
   align-items: center;
 }
+.emojicard-but {
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+  outline: none;
+}
