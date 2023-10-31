@@ -1,0 +1,26 @@
+/* Write your code here. */
+.nav-cont {
+  background-color: #ffffff33;
+  width: 100%;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav-cont-inner {
+  display: flex;
+  align-items: center;
+}
+.nav-hed {
+  color: white;
+  margin-left: 10px;
+}
+.image-emojigame {
+  color: white;
+}
+.nav-para {
+  color: white;
+  margin-right: 20px;
+  font-weight: bold;
+}

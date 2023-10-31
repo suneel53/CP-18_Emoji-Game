@@ -1,0 +1,15 @@
+/* Write your code here. */
+.emojilist-cont {
+  background-color: #ffffff33;
+  border: 1px solid #ffffff30;
+  border-radius: 10px;
+  width: 130px;
+  height: 150px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

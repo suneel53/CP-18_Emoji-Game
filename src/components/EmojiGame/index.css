@@ -1,0 +1,23 @@
+/* Write your code here. */
+.bg-cont {
+  background-image: linear-gradient(to bottom right, #9796f0, #fbc7d4);
+  background-size: cover;
+  height: 100vh;
+}
+.bottom-cont {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logoImages-cont {
+  width: 80%;
+  border: 1px solid white;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}

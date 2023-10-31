@@ -1,0 +1,46 @@
+/* Write your code here. */
+.winorloss-cont {
+  background-color: #ffffff33;
+  border: 1px solid #ffffff30;
+  border-radius: 10px;
+  width: 80%;
+  height: 60%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.winorloss-details-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.winorlose-hed {
+  color: white;
+  margin-bottom: 20px;
+}
+.winorloss-para {
+  color: white;
+  font-weight: bold;
+}
+.winorloss-score {
+  color: #6a59ff;
+  font-size: 24px;
+  font-weight: 600;
+}
+.winorlose-image {
+  margin-left: 50px;
+  width: 250px;
+  height: 300px;
+}
+.win-but {
+  background-color: #ffce27;
+  color: black;
+  border: 0px;
+  border-radius: 10px;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 20px;
+}
