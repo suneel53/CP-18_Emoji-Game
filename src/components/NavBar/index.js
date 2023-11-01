@@ -5,6 +5,7 @@ import './index.css'
 class NavBar extends Component {
   render() {
     const {selectedEmojilist, highScore} = this.props
+    const isWon = selectedEmojilist.length === 12 ? 'nn' : ''
     const score = selectedEmojilist.length
     return (
       <nav className="nav-cont">
@@ -18,8 +19,8 @@ class NavBar extends Component {
         </div>
 
         <div className="nav-cont-inner">
-          <p className="nav-para">Score: {score}</p>
-          <p className="nav-para">Top Score: {highScore}</p>
+          <p className={`nav-para ${isWon}`}>Score: {score}</p>
+          <p className={`nav-para ${isWon}`}>Top Score: {highScore}</p>
         </div>
       </nav>
     )

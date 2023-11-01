@@ -27,7 +27,29 @@ class EmojiGame extends Component {
     return selectedEmojilist.includes(id)
   }
 
+  finishGameandSetTopScore = length => {
+    const {score, highScore} = this.state
+    if (length === 12) {
+      console.log('won')
+      this.setState({
+        highScore: 12,
+        isPlaying: false,
+      })
+    } else {
+      if (score > highScore) {
+        this.setState({
+          highScore: score,
+          isPlaying: false,
+        })
+      }
+      this.setState({
+        isPlaying: false,
+      })
+    }
+  }
+
   addSelectedEmoji = id => {
+    /*
     const check = this.checkIdinlist(id)
     const {selectedEmojilist, highScore} = this.state
     if (!check) {
@@ -41,6 +63,22 @@ class EmojiGame extends Component {
         this.setState({highScore: selectedEmojilist.length})
       }
       this.setState({selectedEmojilist: [], isPlaying: false})
+    }
+    */
+    const {emojisList} = this.props
+    const {selectedEmojilist} = this.state
+    const selectedEmojilistLength = selectedEmojilist.length
+    const check = this.checkIdinlist(id)
+    if (check) {
+      this.finishGameandSetTopScore(selectedEmojilistLength)
+    } else {
+      if (emojisList.length - 1 === selectedEmojilistLength) {
+        this.finishGameandSetTopScore(emojisList.length)
+      }
+      this.setState(prevState => ({
+        selectedEmojilist: [...prevState.selectedEmojilist, id],
+        score: prevState.score + 1,
+      }))
     }
   }
 
