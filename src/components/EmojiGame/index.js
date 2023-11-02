@@ -111,7 +111,11 @@ class EmojiGame extends Component {
     console.log(selectedEmojilist)
     return (
       <div className="bg-cont">
-        <NavBar selectedEmojilist={selectedEmojilist} highScore={highScore} />
+        <NavBar
+          selectedEmojilist={selectedEmojilist}
+          isPlaying={isPlaying}
+          highScore={highScore}
+        />
 
         <div className="bottom-cont">
           {isPlaying ? this.showplayingcont(emojisList) : ''}
