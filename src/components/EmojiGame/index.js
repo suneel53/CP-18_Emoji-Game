@@ -14,12 +14,19 @@ const shuffledEmojisList = () => {
 */
 
 // Write your code here.
+
 class EmojiGame extends Component {
   state = {
     selectedEmojilist: [],
     score: 0,
     highScore: 0,
     isPlaying: true,
+  }
+
+  shuffledEmojisList = () => {
+    const {emojisList} = this.props
+    console.log('new function')
+    return emojisList.sort(() => Math.random() - 0.5)
   }
 
   checkIdinlist = id => {
@@ -82,11 +89,13 @@ class EmojiGame extends Component {
     }
   }
 
-  showplayingcont = emojisList => {
+  showplayingcont = () => {
     console.log('showing playing view')
+    const shuffledemojisList = this.shuffledEmojisList()
+    console.log(shuffledemojisList)
     return (
       <ul className="logoImages-cont">
-        {emojisList.map(eachemoji => (
+        {shuffledemojisList.map(eachemoji => (
           <EmojiCard
             details={eachemoji}
             addSelectedEmoji={this.addSelectedEmoji}
@@ -106,7 +115,6 @@ class EmojiGame extends Component {
   }
 
   render() {
-    const {emojisList} = this.props
     const {selectedEmojilist, highScore, isPlaying, score} = this.state
     console.log(selectedEmojilist)
     return (
@@ -118,7 +126,7 @@ class EmojiGame extends Component {
         />
 
         <div className="bottom-cont">
-          {isPlaying ? this.showplayingcont(emojisList) : ''}
+          {isPlaying ? this.showplayingcont() : ''}
           {isPlaying ? (
             ''
           ) : (
